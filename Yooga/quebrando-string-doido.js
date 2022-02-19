@@ -1,4 +1,4 @@
-// 1 - Criar string com "n" caracteres;
+// 1 - Criar string com "n" palavras;
 // 2 - Separar todas as palavras por espaços " ";
 // 3 - Conte quantas vezes cada uma delas apareceram;
 // 4 - Ordenar por ordem decrescente;
@@ -8,13 +8,13 @@ let phase = "a lavadeira trabalhava trabalhava trabalhava e trabalhava";
 let divisor = phase.split(" ");
 
 divisor = divisor.filter(function (element) {
-  return element.replace(/(\r\n|\n|\r)/gm, ""); // retira os espaços vazios utilizando o filter
+  return element.replace(/(\r\n|\n|\r)/gm, ""); // Retira os espaços vazios utilizando o filter
 });
 
 function countArray(divisor) {
-  const contElem = Object.create(null); // criação de um objeto vazio
+  const contElem = Object.create(null); // Criação de um objeto vazio
   for (const element of divisor) {
-    // for of verifica valor e não a chave
+    // for of para verifica valor e não a chave do objeto
     if (!contElem[element]) {
       // Se não existir elemento dentro do objeto, adiciona 1.
 
@@ -24,7 +24,6 @@ function countArray(divisor) {
       contElem[element] += 1;
     }
   }
-
   return contElem;
 }
 
@@ -36,4 +35,4 @@ console.log(
       })
       .reverse()
   )
-); // Coloca na ordenação
+); // Coloca na ordem descrecente
