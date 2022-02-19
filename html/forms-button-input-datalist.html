@@ -1,0 +1,80 @@
+<!-- 
+
+<form>
+
+    - Elemento relacionado a um formulário
+    - É um container estilo <section> <footer>
+
+
+ Atributos Básicos
+  - action = os dados do form serão enviados para algum lugar
+  - method = só recebe POST ou GET e é um metodo de enviar dados
+  - sem os atributos, o form irá entender como: action="" e method = "GET"
+
+
+
+<fieldset>
+- agrupamento de campos;
+- mesmo propósito;
+- semântico;
+- acessibilidade;
+
+Atributos especiais
+- disabled = desabilita todos os elementos internos;
+           não serão enviados ao submeter o formulário;
+
+- form = o id de um formulário ao qual esse fieldset pertence e não precisa estar dentro do formulário;
+
+- name = nome do grupo;
+
+<legend>
+    - nome do agrupamento;
+    - primeiro elemento dentro do fieldset; 
+
+
+    <button>
+    type: submit or button = enviar formulario
+    reset = reseta o formulário
+    autofocus = foca no botão com esse atributo na página
+    value = recebe um valor de um botão
+    form = linkar um botão a um formulário
+
+
+# <datalist>
+    
+    - Lista de valores predefinidos com a tag <input>
+    - types = text, search, url, tel, email, date, month, week, time, datetime-loca
+              number, range e color.
+
+-->
+
+<!-- Formulário para enviar algo-->
+
+<form id="contato" action=""></form>
+<fieldset form="contato" name="input-contact">
+  <legend>Contato</legend>
+  <label for="nome">Nome</label>
+  <input id="nome" value="Digite aqui!" type="text" />
+  <button type="submit">Enviar</button>
+</fieldset>
+
+<!-- Formulario que reseta o campo Name-->
+
+<form>
+  <label>Nome:</label>
+  <input id="nome" placeholder="Digite aqui!" type="text" />
+  <button type="reset">Enviar</button>
+</form>
+
+<!-- Datalist -->
+<label> Graphic Card: </label>
+<input type="number" list="gpus" placeholder="Choose your VGA" />
+
+<datalist id="gpus">
+  <option>GTX 1060</option>
+  <option>GTX 1070</option>
+  <option>RTX 2060</option>
+  <option>RTX 2070</option>
+  <option>RTX 3060</option>
+  <option>RTX 3070</option>
+</datalist>
