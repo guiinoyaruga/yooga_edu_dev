@@ -3,22 +3,23 @@
 // 3 - Conte quantas vezes cada uma delas apareceram;
 // 4 - Ordenar por ordem decrescente;
 
-let phase = "a lavadeira trabalhava, trabalhava trabalhava e trabalhava";
+
+let phase = "a lavadeira trabalhava, trabalhava, trabalhava e trabalhava";
 
 let regex = phase.replace(/,/g, "");
 
 let divisor = regex;
 
-let divisor = phase.split(" ");
+divisor = divisor.split(" ");
 
 divisor = divisor.filter(function (element) {
-  return element.replace(/(\r\n|\n|\r)/gm, ""); // Retira os espaços vazios/vírgulas utilizando o filter
+  return element.replace(/g(\r\n|\n|\r)/gm, ""); // retira os espaços vazios/virgulas utilizando o filter
 });
 
 function countArray(divisor) {
-  const contElem = Object.create(null); // Criação de um objeto vazio
+  const contElem = Object.create(null); // criação de um objeto vazio
   for (const element of divisor) {
-    // for of para verifica valor e não a chave do objeto
+    // for of verifica valor e não a chave
     if (!contElem[element]) {
       // Se não existir elemento dentro do objeto, adiciona 1.
 
@@ -28,6 +29,7 @@ function countArray(divisor) {
       contElem[element] += 1;
     }
   }
+
   return contElem;
 }
 
