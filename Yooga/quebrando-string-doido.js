@@ -5,10 +5,14 @@
 
 let phase = "a lavadeira trabalhava trabalhava trabalhava e trabalhava";
 
+let regex = phase.replace(/,/g, "");
+
+let divisor = regex;
+
 let divisor = phase.split(" ");
 
 divisor = divisor.filter(function (element) {
-  return element.replace(/(\r\n|\n|\r)/gm, "").replace(/,/g, "");; // Retira os espaços vazios/vírgulas utilizando o filter
+  return element.replace(/(\r\n|\n|\r)/gm, ""); // Retira os espaços vazios/vírgulas utilizando o filter
 });
 
 function countArray(divisor) {
