@@ -3,7 +3,7 @@
 // 3 - Conte quantas vezes cada uma delas apareceram;
 // 4 - Ordenar por ordem decrescente;
 
-let phase = "a lavadeira trabalhava trabalhava trabalhava e trabalhava";
+let phase = "a lavadeira trabalhava, trabalhava trabalhava e trabalhava";
 
 let regex = phase.replace(/,/g, "");
 
